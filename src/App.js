@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/zomoto" element={<ZomatoScreen />} />
+          <Route exact path="/zomato" element={<ZomatoScreen />} />
         </Routes>
       </BrowserRouter>
     </div>
