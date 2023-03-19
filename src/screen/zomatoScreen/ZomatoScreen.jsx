@@ -7,9 +7,13 @@ import CustomImage from "../../component/CustomImage/CustomImage";
 
 // image
 import IndianFlag from "../../assets/images/indianFlag.png";
+import CustomHead from "../../component/CustomHead/CustomHead";
+import ZomatoLogo from "../../assets/images/zomato.png";
 
-const ZomotoScreen = () => {
+const ZomatoScreen = () => {
   return (
+    <>
+    <CustomHead title={"Best Restaturants in India - Zomato"}/>
     <div>
       <div className="bg-zomotoBg w-full h-[70vh] flex flex-col">
         <div className="w-[90%] h-[20%] flex justify-end items-start text-white">
@@ -64,7 +68,8 @@ const ZomotoScreen = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
-export default ZomotoScreen;
+export default ZomatoScreen;
