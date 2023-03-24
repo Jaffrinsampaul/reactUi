@@ -9,13 +9,19 @@ import CustomImage from "../../component/CustomImage/CustomImage";
 import IndianFlag from "../../assets/images/indianFlag.png";
 import CustomHead from "../../component/CustomHead/CustomHead";
 import ZomatoLogo from "../../assets/images/zomato.png";
+import ZomatoBanner from "../../assets/images/zomatoBanner.png";
+import rightArrow from "../../assets/images/right-arrow.png";
+
+
+// utils
+import { zomato } from "../../utills/zomato/staticsText";
 
 const ZomatoScreen = () => {
   return (
     <>
     <CustomHead title={"Best Restaturants in India - Zomato"}/>
     <div>
-      <div className="bg-zomotoBg w-full h-[70vh] flex flex-col">
+      <div className="bg-zomotoBg bg-no-repeat bg-cover w-full h-[70vh] flex flex-col">
         <div className="w-[90%] h-[20%] flex justify-end items-start text-white">
           <CustomNavbar
             details={["Add restaurant", "Log in", "Sign up"]}
@@ -25,13 +31,13 @@ const ZomatoScreen = () => {
           />
         </div>
         <div className="h-[70%] w-full flex flex-col justify-center">
-          <CustomText text={"Zomoto"} textStyle={"text-white text-[70px]"} />
+          <CustomText text={zomato.title} textStyle={"text-white text-[70px]"} />
           <CustomText
-            text={"Find the best restaurants, cafés"}
+            text={zomato.description.firstLine}
             textStyle={"text-white text-[50px]"}
           />
           <CustomText
-            text={"and bars in India"}
+            text={zomato.description.secondLine}
             textStyle={"text-white text-[50px]"}
           />
         </div>
@@ -58,10 +64,10 @@ const ZomatoScreen = () => {
         </div>
         <div className="w-full flex justify-center">
 
-        <div className="w-[50%] flex justify-center">
+        <div className="w-[60%] flex justify-center text-opacity-50 text-black text-[1.3rem] max-w-[90rem]">
           <CustomText
             text={
-              "From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal."
+             zomato.subTitle
             }
           />
         </div>

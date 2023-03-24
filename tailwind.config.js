@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme=>({
-        "zomotoBg": "url('/src/assets/images/zomotoBg.jpg')"
+        "zomotoBg": "url('/src/assets/images/zomatoBanner.png')"
       })
     },
   },
