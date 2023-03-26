@@ -4,24 +4,22 @@ import React, { useState } from "react";
 import CustomNavbar from "../../component/CustomNavbar/CustomNavbar";
 import CustomText from "../../component/CustomText/CustomText";
 import CustomImage from "../../component/CustomImage/CustomImage";
+import CustomCard from "../../component/CustomCard/CustomCard";
+import ZomatoFooter from "../../container/ZomatoFooter/ZomatoFooter";
+import TopLoading from "../../component/CustomLoading/TopLoading";
 
 // image
 import IndianFlag from "../../assets/images/indianFlag.png";
 import CustomHead from "../../component/CustomHead/CustomHead";
-import ZomatoLogo from "../../assets/images/zomato.png";
-import ZomatoBanner from "../../assets/images/zomatoBanner.png";
 import rightArrow from "../../assets/images/right-arrow.png";
 
 // utils
 import { zomato } from "../../utills/zomato/staticsText";
 import { cityName, countries } from "../../utills/zomato/mockData";
-import CustomCard from "../../component/CustomCard/CustomCard";
-import ZomatoFooter from "../../container/ZomatoFooter/ZomatoFooter";
-import TopLoading from "../../component/CustomLoading/TopLoading";
-import { display } from "@mui/system";
 
 const ZomatoScreen = () => {
   const [isLoading, setIsLoading]=useState(true);
+  // is called in top loading components
   const loadingCompleted =()=> setIsLoading(false);
   return (
     <>

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+
+// components
 import CustomText from "../../component/CustomText/CustomText";
+import CustomImage from "../../component/CustomImage/CustomImage";
+import CustomDropDown from "../../component/CustomDropDown/CustomDropDown";
 
 // image
 import Youtube from "../../assets/images/youtube.png";
@@ -9,17 +13,12 @@ import Twitter from "../../assets/images/twitter.png";
 import LinkedIn from "../../assets/images/linkedIn.jpg";
 import rightArrow from "../../assets/images/right-arrow.png";
 import World from "../../assets/images/world.png";
-import AppleLogo from "../../assets/images/appleLogo.png";
-import PlayStore from "../../assets/images/playstoreLogo.png";
-
 import DownloadAppStore from "../../assets/images/downloadAppStore.png";
 import DownloadPlayStore from "../../assets/images/downloadPlaystore.png";
 
-import CustomDropDown from "../../component/CustomDropDown/CustomDropDown";
+// utills
 import { countries } from "../../utills/zomato/mockData";
-import CustomImage from "../../component/CustomImage/CustomImage";
 import { zomato } from "../../utills/zomato/staticsText";
-import CustomButton from "../../component/CustomButton/CustomButton";
 
 const ZomatoFooter = () => {
   const [isCountryOpen, setIsCountryOpen] = useState(null);
@@ -104,7 +103,15 @@ const ZomatoFooter = () => {
             visible={anchorCountry}
             menuItem={countries}
             close={(event) => isCountry(event, "close")}
-            style={{ height: 10, width: 30, text: "pl-3 text-[13px]" }}
+            style={{
+              height: 10,
+              width: 30,
+              text: "pl-3 text-[13px]",
+              paperWidth: 850,
+              menuContent: "flex flex-wrap w-[100%]",
+              menuItem: { width: "20%", height: "40px" },
+              menuItemContent: "flex w-[full] items-center"
+            }}
             isPaper={true}
           />
         </div>
