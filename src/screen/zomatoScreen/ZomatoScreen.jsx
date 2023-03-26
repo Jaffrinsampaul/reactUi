@@ -35,7 +35,7 @@ const ZomatoScreen = () => {
           <div className="h-[70%] w-full flex flex-col justify-center">
             <CustomText
               text={zomato.title}
-              textStyle={"text-white text-[70px]"}
+              textStyle={"text-white text-[70px] font-[helvetica-light]"}
             />
             <CustomText
               text={zomato.description.firstLine}
@@ -68,13 +68,13 @@ const ZomatoScreen = () => {
             />
           </div>
           <div className="w-full flex justify-center">
-            <div className="w-[60%] flex justify-center text-opacity-50 text-black text-[1.3rem] max-w-[90rem]">
+            <div className="w-[60%] flex justify-center text-opacity-50 text-black text-[1.3rem] max-w-[90rem] font-[helvetica-light]">
               <CustomText text={zomato.subTitle} />
             </div>
           </div>
         </div>
         <div className="w-[100%] pt-14 flex flex-row justify-center align-middle">
-          <div className="w-[80%] flex flex-row flex-wrap gap-7 justify-between ">
+          <div className="w-[75%] flex flex-row flex-wrap gap-7 justify-between ">
             {cityName.map((city) => {
               return (
                 <>
@@ -83,7 +83,7 @@ const ZomatoScreen = () => {
                     style={{
                       outerDiv: `border border-black border-opacity-10 flex flex-row 
                         justify-between items-center w-[30%] h-[65px] rounded-[10px]
-                         p-2 pl-4 pr-4 shadow-sm hover:shadow transition ease-in-out delay-150`,
+                         p-2 pl-7 pr-7 shadow-sm hover:shadow transition ease-in-out delay-150 font-[helvetica-light] `,
                       image: { width: 10, height: 3 },
                       text: "text-black text-[20px]",
                     }}
@@ -95,13 +95,13 @@ const ZomatoScreen = () => {
         </div>
 
         <div className="pt-10 pb-8 w-full flex flex-col justify-center items-center">
-          <div className="w-[80%] flex flex-row justify-start">
+          <div className="w-[75%] flex flex-row justify-start">
             <CustomText
               text={"All Countries"}
               textStyle={"text-[30px] font-semibold"}
             />
           </div>
-          <div className="w-[80%] flex flex-row flex-wrap gap-7 justify-between pt-10 ">
+          <div className="w-[75%] flex flex-row flex-wrap gap-7 justify-between pt-10 ">
             {countries.map((obj) => {
               return (
                 <>
@@ -109,11 +109,11 @@ const ZomatoScreen = () => {
                       details={{ text: obj, image: rightArrow }}
                       style={{
                         outerDiv: `border border-black border-opacity-10 flex flex-row 
-                        justify-between items-center w-[30%] h-[65px] rounded-[10px]
+                        justify-between items-center w-[30%] h-[75px] rounded-[10px]
                          p-2 pl-4 pr-4 shadow-sm hover:shadow transition ease-in-out delay-100`,
-                        image: { width: 10, height: 3 },
-                        text: "text-black text-[20px] indent-5",
-                        profileImage: { width: 30, height: 15},
+                        image: { width: 20, height: 6 },
+                        text: "text-black text-[20px] indent-5 font-[helvetica-light]",
+                        profileImage: { width: 40, height: 15},
                         profileImageStyle: {borderRadius: "5px"},
                         profileDiv: 'w-[70%]  flex flex'
                       }}

@@ -58,9 +58,12 @@ const ZomatoFooter = () => {
   return (
     <div className="h-[58vh]  bg-black bg-opacity-5">
       <div className="h-[25%] flex flex-row justify-center">
-        <div className="w-[80%] flex flex-row items-center justify-between">
-          <CustomText text={"Zomato"} textStyle={"text-[35px]"} />
-          <div className="flex w-[23%] justify-between  ">
+        <div className="w-[75%] flex flex-row items-center justify-between">
+          <CustomText
+            text={"Zomato"}
+            textStyle={"text-[35px] font-[helvetica-light]"}
+          />
+          <div className="flex w-[25%] justify-between  ">
             <div
               onClick={(event) => isCountry(event, "open")}
               className="w-[130px] h-[40px] flex justify-around items-center border rounded-[5px] border-black border-opacity-30"
@@ -108,94 +111,49 @@ const ZomatoFooter = () => {
       </div>
 
       <div className="flex justify-center h-[50%]">
-        <div className="w-[80%] h-full flex">
-          <div className="w-[30%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5">
-            <CustomText text={"ABOUT ZOMATO"} />
-            <CustomText
-              text={"Who We Are"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Blog"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Work With Us"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Investor Relations"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Report Fraud"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Contact US"}
-              textStyle={"text-opacity-40 text-black"}
-            />
+        <div className="w-[75%] h-full flex">
+          <div className="w-[30%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5 ">
+            <CustomText text={"ABOUT ZOMATO"} textStyle={"tracking-widest"} />
+            {zomato.aboutZomato.map((elm) => (
+              <CustomText
+                text={elm}
+                textStyle={"text-opacity-40 text-black "}
+              />
+            ))}
           </div>
           <div className="w-[30%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5">
-            <CustomText text={"ZOMAVERSE"} />
-            <CustomText
-              text={"Zomato"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Blinkit"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Feeding India"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Hyperpure"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Zomaland"}
-              textStyle={"text-opacity-40 text-black"}
-            />
+            <CustomText text={"ZOMAVERSE"} textStyle={"tracking-widest"} />
+            {zomato.zomatoVerse.map((elm) => (
+              <CustomText text={elm} textStyle={"text-opacity-40 text-black"} />
+            ))}
           </div>
           <div className="w-[35%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5">
-            <CustomText text={"FOR RESTATURANTS"} />
             <CustomText
-              text={"Partner With Us"}
-              textStyle={"text-opacity-40 text-black"}
+              text={"FOR RESTATURANTS"}
+              textStyle={"tracking-widest"}
             />
-            <CustomText
-              text={"App For You"}
-              textStyle={"text-opacity-40 text-black"}
-            />
+            {zomato.forRestaturants.map((elm) => (
+              <CustomText text={elm} textStyle={"text-opacity-40 text-black"} />
+            ))}
 
-            <CustomText text={"FOR ENTERPRISES"} />
             <CustomText
-              text={"Zomato For Work"}
-              textStyle={"text-opacity-40 text-black"}
+              text={"FOR ENTERPRISES"}
+              textStyle={"tracking-widest"}
             />
+            {zomato.forEnterprises.map((elm) => (
+              <CustomText text={elm} textStyle={"text-opacity-40 text-black"} />
+            ))}
           </div>
 
           <div className="w-[25%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5">
-            <CustomText text={"LEARN MORE"} />
-            <CustomText
-              text={"Privacy"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText
-              text={"Security"}
-              textStyle={"text-opacity-40 text-black"}
-            />
-            <CustomText text={"Teams  "} />
-            <CustomText
-              text={"Sitemap"}
-              textStyle={"text-opacity-40 text-black"}
-            />
+            <CustomText text={"LEARN MORE"} textStyle={"tracking-widest"} />
+            {zomato.learnMore.map((elm) => (
+              <CustomText text={elm} textStyle={"text-opacity-40 text-black"} />
+            ))}
           </div>
 
           <div className="w-[30%] h-[90%] flex flex-col justify-evenly items-start  text-opacity-5">
-            <CustomText text={"SOCIAL LINKS"} />
+            <CustomText text={"SOCIAL LINKS"} textStyle={"tracking-widest"} />
             <div className="flex w-[50%] justify-evenly">
               {SOCIAL_MEDIA.map((image) => {
                 return (
@@ -206,19 +164,19 @@ const ZomatoFooter = () => {
               })}
             </div>
             <div className=" w-[50%] h-[30px] bg-[#213a50] flex justify-center rounded-md">
-              <CustomImage image={DownloadAppStore} height={70} width={60}/>
+              <CustomImage image={DownloadAppStore} height={70} width={60} />
             </div>
             <div className=" w-[50%] h-[30px] bg-[#213a50] flex justify-center rounded-md">
-              <CustomImage image={DownloadAppStore} height={70} width={60}/>
+              <CustomImage image={DownloadAppStore} height={70} width={60} />
             </div>
           </div>
         </div>
       </div>
       <div className="flex items-end justify-center h-[5%]">
-        <div className=" h-[0px] w-[80%] border border-black border-opacity-10 rounded-sm"></div>
+        <div className=" h-[0px] w-[75%] border border-black border-opacity-10 rounded-sm"></div>
       </div>
       <div className="w-full h-[20%] flex justify-center">
-        <div className="flex w-[80%] h-full items-center justify-items-start text-left">
+        <div className="flex w-[75%] h-full items-center justify-items-start text-left">
           <CustomText
             text={zomato.teamCondition}
             textStyle={"text-black text-opacity-40"}

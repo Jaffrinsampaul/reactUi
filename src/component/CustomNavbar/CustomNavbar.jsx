@@ -7,7 +7,7 @@ const CustomNavbar =({details, styles})=>{
                 details.map((nav, index)=>{
                     return(
                         <div key={index}>
-                            <p>{nav}</p>
+                            <p className="font-[helvetica-light]">{nav}</p>
                         </div>
                     )
                 })

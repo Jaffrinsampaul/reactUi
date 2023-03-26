@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       backgroundImage: theme=>({
         "zomotoBg": "url('/src/assets/images/zomatoBanner.png')"
-      })
+      }),
+      fontWeight:{
+        "helvetica" :["Helvetica-bold"],
+        "helvetica-light" :["helvetica-light"]
+      }
     },
   },
   plugins: [],
