@@ -16,6 +16,7 @@ import rightArrow from "../../assets/images/right-arrow.png";
 import { zomato } from "../../utills/zomato/staticsText";
 import { cityName, countries } from "../../utills/zomato/mockData";
 import CustomCard from "../../component/CustomCard/CustomCard";
+import ZomatoFooter from "../../container/ZomatoFooter/ZomatoFooter";
 
 const ZomatoScreen = () => {
   return (
@@ -93,14 +94,14 @@ const ZomatoScreen = () => {
           </div>
         </div>
 
-        <div className="pt-10 w-full flex flex-col justify-center items-center">
+        <div className="pt-10 pb-8 w-full flex flex-col justify-center items-center">
           <div className="w-[80%] flex flex-row justify-start">
             <CustomText
               text={"All Countries"}
               textStyle={"text-[30px] font-semibold"}
             />
           </div>
-          <div className="w-[80%] flex flex-row flex-wrap gap-7 justify-between pt-10">
+          <div className="w-[80%] flex flex-row flex-wrap gap-7 justify-between pt-10 ">
             {countries.map((obj) => {
               return (
                 <>
@@ -109,7 +110,7 @@ const ZomatoScreen = () => {
                       style={{
                         outerDiv: `border border-black border-opacity-10 flex flex-row 
                         justify-between items-center w-[30%] h-[65px] rounded-[10px]
-                         p-2 pl-4 pr-4 shadow-sm hover:shadow transition ease-in-out delay-150`,
+                         p-2 pl-4 pr-4 shadow-sm hover:shadow transition ease-in-out delay-100`,
                         image: { width: 10, height: 3 },
                         text: "text-black text-[20px] indent-5",
                         profileImage: { width: 30, height: 15},
@@ -122,6 +123,8 @@ const ZomatoScreen = () => {
             })}
           </div>
         </div>
+
+        <ZomatoFooter/>
       </div>
     </>
   );
