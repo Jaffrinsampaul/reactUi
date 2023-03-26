@@ -26,7 +26,7 @@ const ZomatoScreen = () => {
           <CustomNavbar
             details={["Add restaurant", "Log in", "Sign up"]}
             styles={
-              "flex items-start h-full w-[50%] justify-around text-[20px] pt-6"
+              "flex items-start h-full w-[30%] justify-around text-[20px] pt-6"
             }
           />
         </div>
