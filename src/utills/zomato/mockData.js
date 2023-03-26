@@ -14,12 +14,12 @@ import Philippines from "../../assets/images/countryFlag/philippinessFlag.png";
 import Poland from "../../assets/images/countryFlag/polandFlag.png";
 import Portugal from "../../assets/images/countryFlag/portugalFlag.png";
 import Qatar from "../../assets/images/countryFlag/qatarFlag.png";
-import Singapore from "../../assets/images/countryFlag/singaporeFlag.png"
+import Singapore from "../../assets/images/countryFlag/singaporeFlag.png";
 import Slovakia from "../../assets/images/countryFlag/slovakiaFlag.png";
 import Sa from "../../assets/images/countryFlag/southAfricaFlag.png";
 import Srilanka from "../../assets/images/countryFlag/sriLankaFlag.png";
-import Turkey  from "../../assets/images/countryFlag/turkeyFlag.png";
-import Uae from "../../assets/images/countryFlag/uaeFlag.png"
+import Turkey from "../../assets/images/countryFlag/turkeyFlag.png";
+import Uae from "../../assets/images/countryFlag/uaeFlag.png";
 import Uk from "../../assets/images/countryFlag/ukFlag.png";
 import Us from "../../assets/images/countryFlag/usFlag.png";
 
@@ -112,28 +112,28 @@ export const cityName = [
 ];
 
 export const countries = [
- {country: "India", image: India},
-  {country: "Australia", image: Australia},
-  {country: "Brasil", image: Brazil},
-  {country:"Canada", image: Canada},
-  {country:"Chile", image: Chile},
-  {country: "Czech Republic", image: Czech},
-  {country: "Indonesia", image: Indonesia},
-  {country:"Ireland", image: Ireland},
-  {country: "Italy", image: Ireland},
-  {country: "Lebanon", image: Lebanon},
-  {country: "Malaysia", image: Malaysia},
-  {country:"New Zealand", image: Nz},
-  {country: "Philippines", image: Philippines},
-  {country :"Poland", image: Poland},
-  {country: "Portugal", image: Portugal},
-  { country:"Qatar", image: Qatar},
-  {country:"Singapore", image: Singapore},
-  {country:"Slovakia", image: Slovakia},
-  {country: "South Africa", image: Sa},
-  {countries:"Sri Lanka", image: Srilanka},
-  {country:"Turkey",image: Turkey},
-  {country:"UAE", image: Uae},
-  {country:"United Kingdom", image: Uk},
-  {country:"United States", image: Us},
+  { country: "India", image: India },
+  { country: "Australia", image: Australia },
+  { country: "Brasil", image: Brazil },
+  { country: "Canada", image: Canada },
+  { country: "Chile", image: Chile },
+  { country: "Czech Republic", image: Czech },
+  { country: "Indonesia", image: Indonesia },
+  { country: "Ireland", image: Ireland },
+  { country: "Italy", image: Italy },
+  { country: "Lebanon", image: Lebanon },
+  { country: "Malaysia", image: Malaysia },
+  { country: "New Zealand", image: Nz },
+  { country: "Philippines", image: Philippines },
+  { country: "Poland", image: Poland },
+  { country: "Portugal", image: Portugal },
+  { country: "Qatar", image: Qatar },
+  { country: "Singapore", image: Singapore },
+  { country: "Slovakia", image: Slovakia },
+  { country: "South Africa", image: Sa },
+  { countries: "Sri Lanka", image: Srilanka },
+  { country: "Turkey", image: Turkey },
+  { country: "UAE", image: Uae },
+  { country: "United Kingdom", image: Uk },
+  { country: "United States", image: Us },
 ];
