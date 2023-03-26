@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // components
 import CustomNavbar from "../../component/CustomNavbar/CustomNavbar";
@@ -17,13 +17,18 @@ import { zomato } from "../../utills/zomato/staticsText";
 import { cityName, countries } from "../../utills/zomato/mockData";
 import CustomCard from "../../component/CustomCard/CustomCard";
 import ZomatoFooter from "../../container/ZomatoFooter/ZomatoFooter";
+import TopLoading from "../../component/CustomLoading/TopLoading";
+import { display } from "@mui/system";
 
 const ZomatoScreen = () => {
+  const [isLoading, setIsLoading]=useState(true);
+  const loadingCompleted =()=> setIsLoading(false);
   return (
     <>
       <CustomHead title={"Best Restaturants in India - Zomato"} />
+      <TopLoading isCompleted={loadingCompleted}/>
       <div>
-        <div className="bg-zomotoBg bg-no-repeat bg-cover w-full h-[70vh] flex flex-col">
+        <div className={`bg-zomotoBg bg-no-repeat bg-cover w-full h-[70vh] flex flex-col ${!isLoading?"visible": "invisible"}`}>
           <div className="w-[90%] h-[20%] flex justify-end items-start text-white">
             <CustomNavbar
               details={["Add restaurant", "Log in", "Sign up"]}
