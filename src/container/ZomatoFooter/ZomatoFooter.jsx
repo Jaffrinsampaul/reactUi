@@ -17,7 +17,7 @@ import DownloadAppStore from "../../assets/images/downloadAppStore.png";
 import DownloadPlayStore from "../../assets/images/downloadPlaystore.png";
 
 // utills
-import { countries } from "../../utills/zomato/mockData";
+import { countries, LANGUAGES } from "../../utills/zomato/mockData";
 import { zomato } from "../../utills/zomato/staticsText";
 
 const ZomatoFooter = () => {
@@ -31,6 +31,7 @@ const ZomatoFooter = () => {
 
   const SOCIAL_MEDIA = [LinkedIn, Instagram, Twitter, Youtube, Facebook];
 
+  // use to open and close country dropdown
   const isCountry = (event, type) => {
     switch (type) {
       case "open":
@@ -43,6 +44,21 @@ const ZomatoFooter = () => {
     }
   };
 
+  // select country
+  const selectCountry = (selctedContry) => {
+    setSelectedCountry(selctedContry);
+    setIsCountryOpen(null);
+    console.log(selctedContry)
+  };
+
+  // select language
+  const selectLanguage = (selectedLanguage) => {
+    setSelectedLanguage(selectedLanguage);
+    setIsLanguageOpen(null);
+    console.log("here")
+  };
+
+  // use to open and close language dropdown
   function isLanguage(event, type) {
     switch (type) {
       case "open":
@@ -62,7 +78,7 @@ const ZomatoFooter = () => {
             text={"Zomato"}
             textStyle={"text-[35px] font-[helvetica-light]"}
           />
-          <div className="flex w-[25%] justify-between  ">
+          <div className="flex w-[28%] justify-between  ">
             <div
               onClick={(event) => isCountry(event, "open")}
               className="w-[130px] h-[40px] flex justify-around items-center border rounded-[5px] border-black border-opacity-30"
@@ -82,7 +98,8 @@ const ZomatoFooter = () => {
               />
             </div>
 
-            <div className="w-[130px] h-[40px] flex justify-around items-center border rounded-[5px] border-black border-opacity-30">
+            <div className="w-[170px] h-[40px] flex justify-around items-center border rounded-[5px] border-black border-opacity-30"
+            onClick={(event)=>isLanguage(event, "open")}>
               <CustomImage
                 image={World}
                 height={10}
@@ -102,17 +119,31 @@ const ZomatoFooter = () => {
             ref={isCountryOpen}
             visible={anchorCountry}
             menuItem={countries}
+            selectCountry={selectCountry}
             close={(event) => isCountry(event, "close")}
             style={{
               height: 10,
-              width: 30,
+              width: 40,
               text: "pl-3 text-[13px]",
               paperWidth: 850,
               menuContent: "flex flex-wrap w-[100%]",
               menuItem: { width: "20%", height: "40px" },
-              menuItemContent: "flex w-[full] items-center"
+              menuItemContent: "flex w-[full] items-center",
             }}
             isPaper={true}
+          />
+          <CustomDropDown
+            ref={isLanguageOpen}
+            visible={anchorLanguage}
+            menuItem={LANGUAGES}
+            selectCountry={selectLanguage}
+            close={(event) => isLanguage(event, "close")}
+            style={{
+              text: "pl-3 text-[13px]",
+              menuContent: "flex flex-col",
+              menuItem: { width: "100%", height: "40px" },
+            }}
+            isPaper={false}
           />
         </div>
       </div>

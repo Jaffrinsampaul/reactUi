@@ -1,4 +1,4 @@
-import React,{forwardRef} from "react";
+import React,{forwardRef, useEffect} from "react";
 
 // components
 import CustomImage from "../CustomImage/CustomImage";
@@ -8,7 +8,7 @@ import CustomText from "../CustomText/CustomText";
 import { Menu, MenuItem, Paper } from "@mui/material";
 
 const CustomDropDown = forwardRef(
-  ({ visible, menuItem, close, style, isPaper }, ref) => {
+  ({ visible, menuItem, close, style, selectCountry, isPaper ,}, ref) => {
     return (
         <Menu
           id="basic-menu"
@@ -21,24 +21,24 @@ const CustomDropDown = forwardRef(
         >
           {isPaper ? (
             <Paper sx={{ width: style.paperWidth }}>
-              <MenuContent menuItem={menuItem} style={style} />
+              <MenuContent menuItem={menuItem} style={style} selectCountry={selectCountry}/>
             </Paper>
           ) : (
-            <MenuContent menuItem={menuItem} style={style} />
+            <MenuContent menuItem={menuItem} style={style} selectCountry={selectCountry}/>
           )}
         </Menu>
     );
   }
 );
 
-const MenuContent = ({ menuItem, style }) => {
+const MenuContent = ({ menuItem, style ,selectCountry}) => {
   return (
     <div className= {style.menuContent}>
       {menuItem.map((elm) => {
         return (
-          <MenuItem style={style.menuItem}>
+          <MenuItem style={style.menuItem} onClick={()=>selectCountry(elm)}>
             {typeof elm === "object" ? (
-              <div className={style.menuItemContent}>
+              <div className={style.menuItemContent}  >
                 <CustomImage
                   image={elm.image}
                   height={style.height}
