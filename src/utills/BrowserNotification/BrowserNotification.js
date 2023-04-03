@@ -14,4 +14,8 @@ function notificationMessage() {
     body: "What you want to do?",
     icon: require("../../assets/images/zomato.png")
   });
+  
+  notification.onclick=(event)=>{
+    window.location.href("https://www.zomato.com/india")
+  }
 }
