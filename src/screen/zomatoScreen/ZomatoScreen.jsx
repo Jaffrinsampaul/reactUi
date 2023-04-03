@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // components
 import CustomNavbar from "../../component/CustomNavbar/CustomNavbar";
@@ -16,11 +16,19 @@ import rightArrow from "../../assets/images/right-arrow.png";
 // utils
 import { zomato } from "../../utills/zomato/staticsText";
 import { cityName, countries } from "../../utills/zomato/mockData";
+import BrowserNotification from "../../utills/BrowserNotification/BrowserNotification";
 
 const ZomatoScreen = () => {
   const [isLoading, setIsLoading]=useState(true);
   // is called in top loading components
   const loadingCompleted =()=> setIsLoading(false);
+
+  const triggerNotification =()=>{
+    BrowserNotification()
+  }
+  useEffect(()=>{
+    triggerNotification()
+  },[])
   return (
     <>
       <CustomHead title={"Best Restaturants in India - Zomato"} />
